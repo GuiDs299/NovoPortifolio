@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section id="about" class="about mb-4 p-4 bg-white rounded shadow-sm">
+    <img src="{{ url_for('static', filename='portifolio.jpeg') }}" alt="Foto de Perfil" class="profile-pic d-block mx-auto mb-3">
+    <h2 class="section-title h4">Sobre Mim</h2>
+    <p>Olá, sou Guilherme Henrique Dias Franco!<br>
+    Estou iniciando minha jornada na área de Tecnologia da Informação (TI), e embora ainda não tenha experiência prática no setor, trago comigo uma enorme disposição para aprender e evoluir.<br>
+    Sou movido por desafios e acredito que com dedicação e estudo contínuo, posso desenvolver minhas habilidades e contribuir positivamente para projetos e equipes.<br>
+    Busco oportunidades que me permitam crescer profissionalmente, aprender com profissionais experientes e colocar em prática todo o meu potencial.</p>
+</section>
+{% endblock %}
