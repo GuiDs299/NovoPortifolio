@@ -1,43 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guilherme Henrique Dias Franco</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
-</head>
-<body>
-    <header class="bg-dark text-white text-center py-3">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#">Portfólio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#imagens">Imagens</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <div class="container mt-5">
-        <section id="sobre" class="text-center">
-            <img src="path_to_profile_picture.jpg" alt="Foto de Perfil" class="rounded-circle mb-3" width="150">
-            <h1>Sobre Mim</h1>
-            <p>Olá, meu nome é Guilherme Henrique Dias Franco. Sou desenvolvedor web com experiência em HTML, CSS e JavaScript...</p>
-        </section>
-        <!-- Adicione mais seções conforme necessário -->
-    </div>
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        © 2024 Guilherme Henrique Dias Franco
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section id="about" class="about mb-4 p-4 bg-white rounded shadow-sm">
+    <img src="{{ url_for('static', filename='portifolio.jpeg') }}" alt="Foto de Perfil" class="profile-pic d-block mx-auto mb-3">
+    <h2 class="section-title h4">Sobre Mim</h2>
+    <p>Olá, sou Guilherme Henrique Dias Franco!<br>
+    Estou iniciando minha jornada na área de Tecnologia da Informação (TI), e embora ainda não tenha experiência prática no setor, trago comigo uma enorme disposição para aprender e evoluir.<br>
+    Sou movido por desafios e acredito que com dedicação e estudo contínuo, posso desenvolver minhas habilidades e contribuir positivamente para projetos e equipes.<br>
+    Busco oportunidades que me permitam crescer profissionalmente, aprender com profissionais experientes e colocar em prática todo o meu potencial.</p>
+</section>
+{% endblock %}
